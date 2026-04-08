@@ -27,7 +27,7 @@ function simulateComputerTurn() {
 	const emptyCells = cells.filter((cell) => cell.textContent === '')
 	const randomEmptyCellIndex = Math.ceil(Math.random() * emptyCells.length)
 	const randomEmptyCell = emptyCells[randomEmptyCellIndex]
-	randomEmptyCell.textContent = computerMarker
+	randomEmptyCell.textContent = computerMarker //causing typeerror
 }
 
 function reset() {
@@ -44,20 +44,26 @@ function handleCellClick(e) {
 	// check if the cell has already been filled, do nothing if it has
 	const cellMarker = targetCell.textContent
 	if (cellMarker === playerMarker) {
-		// do nothing, the player needs to click an empty cell
+		// do nothing, the player needs to click an empty cell - not working
 		return
-	}
+	} else if(cellMarker == computerMarker) {
+		// once again do nothing, the player shouldnt be oveerriding the computer's moves
+		return
+	} else {
+		// the cell was not filled: fill the cell with the player's marker and check
+		// to see if they have won the game
+		targetCell.textContent = playerMarker
+		checkWinner(playerMarker)
 
-	// the cell was not filled: fill the cell with the player's marker and check
-	// to see if they have won the game
-	targetCell.textContent = playerMarker
-	checkWinner(playerMarker)
+		if (!winner) {
+				// simulate the computer's next turn and check to see if they’ve won
+			simulateComputerTurn()
+			checkWinner(computerMarker)
+			return
+		}
+		return
+		}
 
-	if (!winner) {
-		// simulate the computer's next turn and check to see if they’ve won
-		simulateComputerTurn()
-		checkWinner(computerMarker)
-	}
 }
 
 // add event listeners
