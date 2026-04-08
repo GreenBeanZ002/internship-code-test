@@ -27,7 +27,6 @@ function simulateComputerTurn() {
 	const emptyCells = cells.filter((cell) => cell.textContent === '')
 	const randomEmptyCellIndex = Math.ceil(Math.random() * emptyCells.length-1)
 	const randomEmptyCell = emptyCells[randomEmptyCellIndex]
-	console.warn(randomEmptyCell);
 	randomEmptyCell.textContent = computerMarker //causing typeerror
 }
 
