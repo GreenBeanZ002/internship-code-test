@@ -10,18 +10,19 @@
 		<div class = "center-column">
 			<div id="status"></div>
 			<div id="board">
-				<button class="cell"></button>
-				<button class="cell"></button>
-				<button class="cell"></button>
-				<button class="cell"></button>
-				<button class="cell"></button>
-				<button class="cell"></button>
-				<button class="cell"></button>
-				<button class="cell"></button>
-				<button class="cell"></button>
+				<button class="cell-player"></button>
+				<button class="cell-undefined"></button>
+				<button class="cell-undefined"></button>
+				<button class="cell-undefined"></button>
+				<button class="cell-undefined"></button>
+				<button class="cell-undefined"></button>
+				<button class="cell-undefined"></button>
+				<button class="cell-undefined"></button>
+				<button class="cell-undefined"></button>
 			</div>
 			<button id="reset">Reset</button>
 		</div>
-					<script src="./main.js"></script>
+		
+		<script src="./main.js"></script>
 	</body>
 </html>

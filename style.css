@@ -1,6 +1,8 @@
 body {
 	margin: 0;
 	padding: 16px;
+	background-color:#383940;
+	color:#ffffff;
 }
 .center {
 	display : flex;
@@ -16,13 +18,17 @@ body {
 	width:100%;
 	
 }
+.cell{
+	background-color: #545561;
+	color:#E0F9FF;
+}
 
 #board {
 	display: grid;
 	grid-template-rows: repeat(3, 1fr);
 	grid-template-columns: repeat(3, 1fr);
-	
 	width: 100%;
 	max-width: 380px;
 	aspect-ratio: 1/1;
 }
+
