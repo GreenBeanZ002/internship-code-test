@@ -1,6 +1,7 @@
 body {
 	margin: 0;
 	padding: 16px;
+	background-colour: #545561;
 }
 .center {
 	display : flex;
