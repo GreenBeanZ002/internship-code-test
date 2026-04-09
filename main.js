@@ -43,7 +43,11 @@ function setWinner(marker) {
 	getCells().forEach((cell) => (cell.disabled = true))
 
 	// reveal the winner
-	document.getElementById('status').textContent = `${marker}’s wins!`
+	if(marker == "X"){
+		document.getElementById('status').textContent = "Player wins!"
+	}else{
+		document.getElementById('status').textContent = "Computer wins!"
+	}
 
 	// update the winner variable so that handleCellClick knows not to continue
 	winner = marker
