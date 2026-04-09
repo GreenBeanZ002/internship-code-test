@@ -69,7 +69,7 @@ function reset() {
 		cell.textContent = ''
 		cell.disabled = false
 	})
-	let winner = null;
+	winner = null;
 }
 
 function handleCellClick(e) {
